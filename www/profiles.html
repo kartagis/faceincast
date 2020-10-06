@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Rejicast</title>
+    </head>
+    <body>
+        <div id="appHolder">
+            <div id="topHolder">
+                <div id="logoHolder">
+                    <img id="logo" src="img/logo.png" />
+                </div>
+                <div id="titleHolder">
+                    Tüm oyuncular
+                </div>
+            </div>
+            <div id="contentHolder" class="profiles">
+                <div class="filterFirst">
+                    <select id="category" class="select">
+                        <option value="All">- Kategori -</option>
+                        <option value="oyuncu">Oyuncu</option>
+                        <option value="cocuk_oyuncu">Çocuk oyuncu</option>
+                        <option value="yardimci_oyuncu">Yardımcı oyuncu</option>
+                        <option value="stand_hostesi">Stand hostesi</option>
+                    </select>
+                </div>
+                <div class="filterAll">
+                    <select id="city" class="select">
+                        <option value="All">- Şehir -</option>
+                        <option value="34">İstanbul</option>
+                        <option value="01">Adana</option>
+                        <option value="02">Adıyaman</option>
+                        <option value="03">Afyon</option>
+                        <option value="04">Ağrı</option>
+                        <option value="05">Amasya</option>
+                        <option value="06">Ankara</option>
+                        <option value="07">Antalya</option>
+                        <option value="08">Artvin</option>
+                        <option value="09">Aydın</option>
+                        <option value="10">Balıkesir</option>
+                        <option value="11">Bilecik</option>
+                        <option value="12">Bingöl</option>
+                        <option value="13">Bitlis</option>
+                        <option value="14">Bolu</option>
+                        <option value="15">Burdur</option>
+                        <option value="16">Bursa</option>
+                        <option value="17">Çanakkale</option>
+                        <option value="18">Çankırı</option>
+                        <option value="19">Çorum</option>
+                        <option value="20">Denizli</option>
+                        <option value="21">Diyarbakır</option>
+                        <option value="22">Edirne</option>
+                        <option value="23">Elazığ</option>
+                        <option value="24">Erzincan</option>
+                        <option value="25">Erzurum</option>
+                        <option value="26">Eskişehir</option>
+                        <option value="27">Gaziantep</option>
+                        <option value="28">Giresun</option>
+                        <option value="29">Gümüşhane</option>
+                        <option value="30">Hakkari</option>
+                        <option value="31">Hatay</option>
+                        <option value="32">Isparta</option>
+                        <option value="33">Mersin</option>
+                        <option value="35">İzmir</option>
+                        <option value="36">Kars</option>
+                        <option value="37">Kastamonu</option>
+                        <option value="38">Kayseri</option>
+                        <option value="39">Kırklareli</option>
+                        <option value="40">Kırşehir</option>
+                        <option value="41">Kocaeli</option>
+                        <option value="42">Konya</option>
+                        <option value="43">Kütahya</option>
+                        <option value="44">Malatya</option>
+                        <option value="45">Manisa</option>
+                        <option value="46">K.Maraş</option>
+                        <option value="47">Mardin</option>
+                        <option value="48">Muğla</option>
+                        <option value="49">Muş</option>
+                        <option value="50">Nevşehir</option>
+                        <option value="51">Niğde</option>
+                        <option value="52">Ordu</option>
+                        <option value="53">Rize</option>
+                        <option value="54">Sakarya</option>
+                        <option value="55">Samsun</option>
+                        <option value="56">Siirt</option>
+                        <option value="57">Sinop</option>
+                        <option value="58">Sivas</option>
+                        <option value="59">Tekirdağ</option>
+                        <option value="60">Tokat</option>
+                        <option value="61">Trabzon</option>
+                        <option value="62">Tunceli</option>
+                        <option value="63">Şanlıurfa</option>
+                        <option value="64">Uşak</option>
+                        <option value="65">Van</option>
+                        <option value="66">Yozgat</option>
+                        <option value="67">Zonguldak</option>
+                        <option value="68">Aksaray</option>
+                        <option value="69">Bayburt</option>
+                        <option value="70">Karaman</option>
+                        <option value="71">Kırıkkale</option>
+                        <option value="72">Batman</option>
+                        <option value="73">Şırnak</option>
+                        <option value="74">Bartın</option>
+                        <option value="75">Ardahan</option>
+                        <option value="76">Iğdır</option>
+                        <option value="77">Yalova</option>
+                        <option value="78">Karabük</option>
+                        <option value="79">Kilis</option>
+                        <option value="80">Osmaniye</option>
+                    </select>
+                </div>
+                <div class="filterAll">
+                    <select id="gender" class="select">
+                        <option value="All">- Cinsiyet -</option>
+                        <option value="bay">Bay</option>
+                        <option value="bayan">Bayan</option>
+                    </select>
+                </div>
+                <div class="filterAll">
+                    <select id="height" class="select">
+                        <option value="All">- Boy -</option>
+                        <option value="150">1.50 - 1.60</option>
+                        <option value="160">1.61 - 1.70</option>
+                        <option value="170">1.71 - 1.80</option>
+                        <option value="180">1.81 - 1.90</option>
+                        <option value="190">1.91 - 2.00</option>
+                        <option value="200">2.01 - 2.10</option>
+                    </select>
+                </div>
+                <div class="filterAll">
+                    <select id="eyecolour" class="select">
+                        <option value="All">- Göz rengi -</option>
+                        <option value="akahve">Açık kahve</option>
+                        <option value="kkahve">Koyu kahve</option>
+                        <option value="siyah">Siyah</option>
+                        <option value="mavi">Mavi</option>
+                        <option value="yesil">Yeşil</option>
+                        <option value="ela">Ela</option>
+                        <option value="gri">Gri</option>
+                    </select>
+                </div>
+                <div class="filterAll">
+                    <select id="skincolour" class="select">
+                        <option value="All">- Ten rengi -</option>
+                        <option value="esmer">Esmer</option>
+                        <option value="beyaz">Beyaz</option>
+                        <option value="siyahi">Siyahi</option>
+                        <option value="bugday">Buğday</option>
+                    </select>
+                </div>
+                <div class="filterAll filterLast">
+                    <select id="weight" class="select">
+                        <option value="All">- Kilo -</option>
+                        <option value="45">40 - 50</option>
+                        <option value="55">51 - 60</option>
+                        <option value="65">61 - 70</option>
+                        <option value="75">71 - 80</option>
+                        <option value="85">81 - 90</option>
+                        <option value="95">91 - 100</option>
+                        <option value="105">101 - 110</option>
+                    </select>
+                </div>
+                <button id="search">Oyuncu ara</button>
+                <div class="loader-container">
+                    <p></p>
+                    <div class="loader"></div>
+                </div>
+            </div>
+            <div id="profiles">
+            </div>
+            <div id="navHolder">
+                <div id="homeHolder">
+                    <img id="homeBtn" src="img/homeBtn.png" />
+                </div>
+                <div id="loginHolder">
+                </div>
+                <div id="notificationHolder">
+                    <div id="notification"></div>
+                    <img id="notificationBtn" src="img/notificationBtn.png" />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/profiles.js"></script>
+    </body>
+</html>

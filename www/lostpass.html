@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Rejicast</title>
+    </head>
+    <body>
+        <div id="appHolder">
+            <div id="topHolder">
+                <div id="logoHolder">
+                    <img id="logo" src="img/logo.png" />
+                </div>
+                <div id="titleHolder">
+                    Şifre yenileme
+                </div>
+            </div>
+            <div id="contentHolder" class="lostpass">
+                <input type="text" id="lostpass" placeholder="Kullanıcı adınızı giriniz" autofocus/>
+                <button id="lostpassbtn" data-theme="b">Yeni şifre gönder</button>
+            </div>
+            <div id="navHolder">
+                <div id="homeHolder">
+                    <img id="homeBtn" src="img/homeBtn.png" />
+                </div>
+                <div id="loginHolder">
+                </div>
+                <div id="notificationHolder">
+                    <div id="notification"></div>
+                    <img id="notificationBtn" src="img/notificationBtn.png" />
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/lostpass.js"></script>
+    </body>
+</html>

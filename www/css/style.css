@@ -1,0 +1,426 @@
+@font-face {
+    font-family:'Exo';
+    src:url(../otf/Exo-Regular.otf);
+}
+
+html {
+    height:100%;
+}
+
+body {
+    -webkit-touch-callout:none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust:none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select:none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    background:fixed;
+    font-family:'Exo' !important;
+    font-size:14px;
+    font-weight:400;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+#appHolder {
+    width:100%;
+    height:auto;
+    min-height:100%;
+    background:url(../img/bg.png) top center;
+}
+#appHolder.profiles {
+    height:100%;
+}
+#topHolder {
+    position:fixed; top:0; width:100%; height:60px;
+    background:url(../img/header.png) top center no-repeat;
+    z-index:1; 
+}
+
+#logoHolder {
+    position:fixed; top:4px; left:5%;
+}
+#logo {
+    width:45px; height:auto; 
+}
+
+#titleHolder {
+    font-size:1.9em; font-weight:600; color:white; position:fixed;
+    right:4%; top:9px; text-shadow:-1px -1px 1px #000;
+}
+
+#contentHolder {
+    padding:70px 4% 70px 4%; overflow:hidden;
+}
+
+#navHolder {
+    position:fixed; bottom:0; width:100%; height:60px; z-index:1200;
+    background:url(../img/navBar.png) bottom center no-repeat;
+}
+#homeHolder {
+    position:fixed; bottom:2px; left:5%;
+}
+#loginHolder {
+    position:fixed; bottom:15px; left:15%; width:70%; text-align:center;
+    font-size:1.9em; font-weight:600; color:white;
+}
+#notificationHolder {
+    position:fixed; bottom:0; right:5%;
+}
+#notification {
+    position:fixed; bottom:36px; right:10%;
+    border-radius:10px; background:red;
+    border:2px solid #FFF; box-shadow:0 0 5px 0 #000;  
+    color:#FFF; font-weight:700; text-align:center;
+    width:15px; height:15px; padding:0 2px 2px 1px;
+    display:none;
+}
+
+#notButtonHolder {
+  width:100%; margin:15px auto 10px; overflow:hidden;
+}
+
+p {
+    width:90%; padding:10px 0; margin:10px auto 10px;
+    font-size:1.2em;
+}
+#profiles, #profile {
+    background:url(../img/bg.png) top center;
+    float:left;
+}
+
+#profile{
+  width: 90%; padding: 50px 5% 100px 5%;
+}
+a[data-role='button'], button {
+    width:90%; margin:10px auto 10px; display:block; text-align:center;
+    padding:20px 0; background:#FFF; border:1px solid #CCCCCC;
+    border-radius:4px; box-shadow:1px 1px 6px -3px #000;
+    color:#333; text-decoration:none; font-weight:700; font-size:1.8em;
+}
+input:not([type="checkbox"]), textarea {
+    padding:10px 2%; width:90%; display:block; border:1px solid #CCC; border-radius:4px;
+    margin:10px auto 10px; font-family:'Exo 2', sans-serif; font-size:1.2em;
+    background:#FFFFFF; box-shadow:2px 2px 8px -3px #000 inset;
+}
+select {
+    padding:10px 2%; width:90%; display:block; border:1px solid #CCC; border-radius:4px;
+    margin:10px auto 10px; font-family:'Exo 2', sans-serif; font-size:1.2em;
+    background:#FFF url(../img/select.png) right center no-repeat;
+    -webkit-appearance:none; -moz-appearance: none; appearance: none;
+    box-shadow:1px 1px 6px -3px #000;
+}
+option {
+    font-family:'Exo', sans-serif;
+}
+.userNotification {
+    width:86%; padding:10px 2%; margin:10px auto 10px;
+    border-radius:4px; border:1px solid #CCC;  font-size:1.2em;
+    background:-moz-linear-gradient(#f1ffa0 0%, #ddeb8c 99%);
+    background:-o-linear-gradient(#f1ffa0 0%, #ddeb8c 99%);
+    background:linear-gradient(#f1ffa0 0%, #ddeb8c 99%);
+    box-shadow:1px 1px 6px -3px #000;
+}
+#selfNot, #genNot {
+    width:40%; text-align:center; margin-left:5%;
+    padding:10px 0; border:1px solid #CCCCCC;
+    border-radius:4px; box-shadow:1px 1px 6px -3px #000;
+    color:#333; text-decoration:none; font-weight:700; font-size:1.2em;
+    background:-webkit-linear-gradient(#FFFFFF 0%, #EEEEEE 99%);
+    background:-moz-linear-gradient(#FFFFFF 0%, #EEEEEE 99%);
+    background:-o-linear-gradient(#FFFFFF 0%, #EEEEEE 99%);
+    background:linear-gradient(#FFFFFF 0%, #EEEEEE 99%);
+}
+#genNot {
+    float:right; margin-right:5%;
+}
+#selfNot {
+    float:left;
+}
+.generalNotification.hayir {
+    width:86%; padding:10px 2%; margin:10px auto 10px;
+    border-radius:4px; border:1px solid #CCC; font-size:1.2em;
+    background:-webkit-linear-gradient(#FFFFFF 0%, #EEEEEE 99%);
+    background:-moz-linear-gradient(#FFFFFF 0%, #EEEEEE 99%);
+    background:-o-linear-gradient(#FFFFFF 0%, #EEEEEE 99%);
+    background:linear-gradient(#FFFFFF 0%, #EEEEEE 99%);
+    box-shadow:1px 1px 6px -3px #000;
+}
+.generalNotification.evet {
+    width:86%; padding:10px 2%; margin:10px auto 10px;
+    border-radius:4px; border:1px solid #CCC;  font-size:1.2em;
+    background:-webkit-linear-gradient(#f1ffa0 0%, #ddeb8c 99%);
+    background:-moz-linear-gradient(#f1ffa0 0%, #ddeb8c 99%);
+    background:-o-linear-gradient(#f1ffa0 0%, #ddeb8c 99%);
+    background:linear-gradient(#f1ffa0 0%, #ddeb8c 99%);
+    box-shadow:1px 1px 6px -3px #000;
+}
+.generalNotification h3 {
+    font-size:1.3em; font-weight:600; margin:3px 0;
+}
+.notificationActive {
+    background:-webkit-linear-gradient(#777777 0%, #222222 99%) !important;
+    background:-moz-linear-gradient(#777777 0%, #222222 99%) !important;
+    background:-o-linear-gradient(#777777 0%, #222222 99%) !important;
+    background:linear-gradient(#777777 0%, #222222 99%) !important;
+    color:#FFF !important;
+}
+.userNotification h3 {
+    font-size:1.3em; font-weight:600; margin:3px 0;
+}
+.ornekBasvurularim {
+    width:86%; padding:10px 2%; margin:10px auto 10px;
+    border-radius:4px; border:1px solid #CCC; overflow:hidden;
+    background:#FFF; box-shadow:1px 1px 6px -3px #000;
+}
+.profile {
+    width:40%; float:left; margin:5%;
+    border-radius:4px; overflow:hidden;
+    background:#FFF; box-shadow:1px 1px 6px -3px #000;
+}
+
+.profileImage {
+    width:100%; height:auto;
+}
+
+.profileName {
+    font-weight:bold; text-align:center;
+    padding:2%;
+}
+.singleProfileImage {
+    margin:auto; width:100%; height:auto;
+}
+.singleProfileName {
+    width:90%; margin:.1em auto .1em; font-size:2em;
+    font-weight:bold;
+}
+.singleProfileSkin {
+    width:90%; margin:.1em auto .1em;
+}
+.singleProfileLabel {
+    float:left; width:32%; font-weight:bold; 
+}
+.singleProfileContent {
+    float:left; width:68%;
+}
+.singleHolder {
+    padding: 10px 0 8px 0; border-bottom: 1px dotted #999; float: left; width: 100%;
+}
+.singleProfileOtherPics, .singleProfileImage, img[id^='otherpicture'] {
+    width:100%; height:auto; margin:5px auto 10px; display:block;
+    background:#FFF; border:1px solid #CCCCCC;
+    border-radius:4px; box-shadow:1px 1px 6px -3px #000;
+}
+#loginBtn, #logoutBtn {
+    display:none;
+}
+#loginHolder {
+    font-size:0.9em;
+}
+#shareViaEmail {
+    float:left;
+}
+#shareViaWhatsApp {
+    float:right;
+}
+a[href="applications.html"] {
+    display:none;
+}
+img#picture,canvas {
+    margin:0 auto;
+    display:none;
+    width:100%; height:auto;
+}
+label {
+    position:relative;
+    left:5%;
+}
+.description {
+    font-size:0.9em;
+    font-style:italic;
+    position:relative;
+    left:7%;
+    width:90%;
+}
+.notificationActive {
+    background:-webkit-linear-gradient(#777777 0%, #222222 99%) !important;
+    background:-moz-linear-gradient(#777777 0%, #222222 99%) !important;
+    background:-o-linear-gradient(#777777 0%, #222222 99%) !important;
+    background:linear-gradient(#777777 0%, #222222 99%) !important;
+    color:#FFF !important;
+}
+#oyuncuKategori {
+    width:90%;
+    margin:auto;
+    border:none;
+    padding:10px 0;
+}
+
+input[type=checkbox] {
+    visibility:hidden;
+}
+#privacy {
+    display:block;
+}
+img.videotn {
+    width:100%;
+    height:auto;
+}
+img.otherpicture {
+    width:100%;
+    height:auto;
+    margin-bottom:3px;
+}
+.roundedOne {
+    width:100%; height: 40px; background: #fcfff4; color:#FFF;
+    background:-webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background:-moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background:-o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background:-ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background:linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+    margin:10px 0; float:left;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    -webkit-box-shadow:inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow:inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    box-shadow:inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    position:relative;
+}
+
+.roundedOne label {
+    cursor:pointer;
+    position:absolute;
+    width:96.5%;
+    height:26px;
+    padding:6px 0 0 0;
+    text-align:center;
+    font-size:20px;
+    border-radius:50px;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    left:4px; top: 4px;
+    box-shadow:inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+    -webkit-box-shadow:inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+    -moz-box-shadow:inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+    background:-webkit-linear-gradient(top, #222 0%, #45484d 100%);
+    background:-moz-linear-gradient(top, #222 0%, #45484d 100%);
+    background:-o-linear-gradient(top, #222 0%, #45484d 100%);
+    background:-ms-linear-gradient(top, #222 0%, #45484d 100%);
+    background:linear-gradient(top, #222 0%, #45484d 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+}
+
+.roundedOne label:after {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter:alpha(opacity=0);
+    opacity:0; content: ''; position: absolute; width: 98%;
+    height:28px; background: #00bf00;
+    background:-webkit-linear-gradient(top, #00bf00 0%, #009400 100%);
+    background:-moz-linear-gradient(top, #00bf00 0%, #009400 100%);
+    background:-o-linear-gradient(top, #00bf00 0%, #009400 100%);
+    background:-ms-linear-gradient(top, #00bf00 0%, #009400 100%);
+    background:linear-gradient(top, #00bf00 0%, #009400 100%);
+    -webkit-border-radius:50px; -moz-border-radius: 50px; border-radius: 50px;
+    top:2px; left: 1%;
+    -webkit-box-shadow:inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow:inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+    box-shadow:inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.roundedOne label:hover::after {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter:alpha(opacity=30); opacity: 0.3;
+}
+
+.roundedOne input[type=checkbox]:checked + label:after {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter:alpha(opacity=100); opacity: .5;
+}
+img[id*="otherpicture"],button[id^="uploadotherpicture-"] {
+    display:none;
+}
+img[id*="otherpicture"] {
+    width:100%;
+    height:auto;
+}
+button[id*="uploadotherpicture"] {
+    font-size:1.1em;
+}
+.loader-container {
+    position:fixed;
+    top:40%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+    height:150px;
+    width:250px;
+    background:#000;
+    border-radius:5px;
+    color:#fff;
+    opacity:0.5;
+    display:none;
+    text-align:center;
+    margin:0 auto;
+}
+.loader {
+    margin:0 auto;
+    width:25px;
+    height:25px;
+    border-top:8px solid transparent;
+    border-right:8px solid transparent;
+    border-bottom:8px solid transparent;
+    border-left:8px solid #333;
+    border-radius:50%;
+    -webkit-animation:ani .7s infinite linear;
+    animation:ani .7s infinite linear;
+}
+@-webkit-keyframes ani {
+    from {
+        -webkit-transform:rotate(0deg);
+    }
+    to {
+        -webkit-transform:rotate(360deg);
+    }
+}
+@keyframes ani {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.profiles #search{
+    width:95%;
+}
+.filterAll{
+    width:50%; float:left;
+}
+.filterFirst select{
+    width:95%; float:none; margin:auto;
+}
+.filterFirst{
+    padding-bottom:8px;
+}
+.filterLast{
+    padding-bottom:8px;
+}
+#uploadpicture{
+    font-size:1.5em;
+}
+#videos {
+    width:100%;
+}
+#videos fieldset {
+    border:none;
+    padding:0;
+    width:90%;
+    margin:auto;
+}
+#videos fieldset input {
+    margin:10px 0;
+    width:100%;
+}
